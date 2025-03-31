@@ -3,5 +3,5 @@ import HomeView from "@/features/home/HomeView";
 import Image from "next/image";
 
 export default function Home() {
-  return <HomeView />;
+  return <div>g</div>;
 }

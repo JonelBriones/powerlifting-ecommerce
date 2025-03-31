@@ -8,6 +8,7 @@ export interface ProductT {
   image: string;
   fit?: string[];
   features: string[];
+  collection?: string | undefined;
 }
 interface sizeStock {
   [size: string]: number;

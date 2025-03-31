@@ -39,7 +39,8 @@
       "IPF approved and competition legal",
       "Made in the USA with premium vegetable-tanned leather"
     ],
-    "image": "https://example.com/lever-belt.jpg"
+    "image": "https://example.com/lever-belt.jpg",
+    "collection": "classic"
   },
   {
     "id": "22",
@@ -65,7 +66,8 @@
       "IPF approved for competition use",
       "Available in multiple sizes with customizable hole spacing"
     ],
-    "image": "https://example.com/lever-belt.jpg"
+    "image": "https://example.com/lever-belt.jpg",
+    "collection": "classic"
   },
   {
     "id": "3",
@@ -85,7 +87,8 @@
       "IPF approved and IWF, USAPL and USPA compliant",
       "Made in Sheffield, Great Britain"
     ],
-    "image": "https://example.com/knee-sleeves.jpg"
+    "image": "https://example.com/knee-sleeves.jpg",
+    "collection": "classic"
   },
   {
     "id": "4",
@@ -121,7 +124,8 @@
       "Available in multiple lengths for different support needs",
       "IPF approved for competition use"
     ],
-    "image": "https://example.com/wrist-wraps.jpg"
+    "image": "https://example.com/wrist-wraps.jpg",
+    "collection": "classic"
   },
   {
     "id": "6",
@@ -164,8 +168,8 @@
       "Made in Sheffield, Great Britain"
     ],
     "image": "https://example.com/singlet.jpg",
-
-    "fit": ["Men's", "Women's"]
+    "fit": ["Men's", "Women's"],
+    "collection": "classic"
   },
   {
     "id": "8",
