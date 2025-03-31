@@ -1,0 +1,260 @@
+{
+  "barbells": [
+    {
+      "id": "101",
+      "productId": "1",
+      "name": "Daniel Carter",
+      "email": "daniel.carter@example.com",
+      "date": "2023-06-12",
+      "rating": 5,
+      "title": "Hit a New PR!",
+      "comment": "I was able to hit a new PR with this barbell! The knurling is just right—not too sharp but enough for a solid grip. Definitely worth it for serious lifters."
+    },
+    {
+      "id": "102",
+      "productId": "1",
+      "name": "Jessica Thompson",
+      "email": "jessica.thompson@example.com",
+      "date": "2024-09-28",
+      "rating": 4,
+      "title": "Solid bar, but shipping was slow",
+      "comment": "The barbell itself is excellent—great spin, solid feel, and perfect for my home gym. However, it took almost three weeks to arrive, which was frustrating."
+    },
+    {
+      "id": "103",
+      "productId": "1",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2025-01-15",
+      "rating": 5,
+      "title": "Game Changer for Deadlifts",
+      "comment": "I've used a few different power bars, but this one stands out. The stiffness is ideal, and I love the center knurling for squats. Feels competition-grade."
+    },
+    {
+      "id": "104",
+      "productId": "1",
+      "name": "Michael Lee",
+      "email": "michael.lee@example.com",
+      "date": "2023-12-05",
+      "rating": 3,
+      "title": "Knurling too aggressive for me",
+      "comment": "I prefer a slightly smoother knurling. My hands feel torn up after high-volume sessions. Might be great for some, but not my favorite."
+    },
+    {
+      "id": "105",
+      "productId": "1",
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "date": "2024-07-19",
+      "rating": 5,
+      "title": "Perfect for Powerlifting",
+      "comment": "I've been training with this bar for a few months, and it's fantastic. Holds up well under heavy loads, and the balance is spot on. Highly recommended!"
+    },
+    {
+      "id": "106",
+      "productId": "1",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2023-11-30",
+      "rating": 4,
+      "title": "Decent, but not amazing",
+      "comment": "It's a good barbell, but I expected a bit more at this price point. No major complaints, but I’ve used better."
+    },
+    {
+      "id": "107",
+      "productId": "1",
+      "name": "William Johnson",
+      "email": "william.johnson@example.com",
+      "date": "2025-03-09",
+      "rating": 5,
+      "title": "Best bar I've owned",
+      "comment": "I've tried multiple barbells in my lifting career, and this one easily beats them all. The finish is durable, and the weight distribution is perfect."
+    },
+    {
+      "id": "108",
+      "productId": "1",
+      "name": "Sarah Mitchell",
+      "email": "sarah.mitchell@example.com",
+      "date": "2024-04-25",
+      "rating": 2,
+      "title": "Arrived with rust spots",
+      "comment": "I was really excited for this bar, but it arrived with some rust spots on the sleeve. Customer service was helpful, but for this price, I expected better quality control."
+    },
+    {
+      "id": "109",
+      "productId": "1",
+      "name": "Ethan Wright",
+      "email": "ethan.wright@example.com",
+      "date": "2023-08-21",
+      "rating": 5,
+      "title": "Exactly what I needed",
+      "comment": "I was looking for a high-quality bar for heavy squats and deadlifts, and this delivers. Love the aggressive knurling. Worth every penny!"
+    },
+    {
+      "id": "110",
+      "productId": "1",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2025-02-10",
+      "rating": 3,
+      "title": "Not bad, but not the best",
+      "comment": "It’s okay for the price, but I feel like there are better options out there for serious lifters."
+    },
+    {
+      "id": "111",
+      "productId": "1",
+      "name": "Chris Taylor",
+      "email": "chris.taylor@example.com",
+      "date": "2024-01-05",
+      "rating": 4,
+      "title": "Feels premium",
+      "comment": "This bar feels like something you'd find in a professional gym. Would have given it 5 stars if the sleeve rotation was a little smoother."
+    },
+    {
+      "id": "112",
+      "productId": "1",
+      "name": "Sophia Robinson",
+      "email": "sophia.robinson@example.com",
+      "date": "2023-10-31",
+      "rating": 5,
+      "title": "Best investment for my home gym",
+      "comment": "I wanted a competition-grade bar for my home setup, and this one exceeded my expectations. The knurling is aggressive but not painful, and the spin is perfect."
+    },
+    {
+      "id": "113",
+      "productId": "1",
+      "name": "Jacob Martinez",
+      "email": "jacob.martinez@example.com",
+      "date": "2024-08-12",
+      "rating": 1,
+      "title": "Not what I expected",
+      "comment": "I had high hopes, but my bar arrived with a slight bend. Contacted support and waiting for a replacement."
+    },
+    {
+      "id": "114",
+      "productId": "1",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2025-01-22",
+      "rating": 5,
+      "title": "Perfect bar for serious lifters",
+      "comment": "I'm prepping for a powerlifting meet, and this bar is exactly what I needed. Great whip and stiffness balance!"
+    },
+    {
+      "id": "115",
+      "productId": "1",
+      "name": "David Walker",
+      "email": "david.walker@example.com",
+      "date": "2023-09-15",
+      "rating": 4,
+      "title": "High quality but expensive",
+      "comment": "Great bar, but it's definitely on the pricey side. If you're serious about lifting, it's worth the investment."
+    },
+    {
+      "id": "116",
+      "productId": "1",
+      "name": "Emma Harris",
+      "email": "emma.harris@example.com",
+      "date": "2024-11-03",
+      "rating": 5,
+      "title": "Built like a tank",
+      "comment": "This bar is built to last! No whip, no bending under heavy loads, and it feels great in hand."
+    }
+  ],
+  "belts": [
+    {
+      "id": "201",
+      "productId": "2",
+      "name": "James Richardson",
+      "email": "james.richardson@example.com",
+      "date": "2023-07-15",
+      "rating": 5,
+      "title": "Best belt I've ever owned",
+      "comment": "The support this belt gives me is insane. I hit a new squat PR within a week of using it. The leather is high quality, and the buckle is rock solid."
+    },
+    {
+      "id": "202",
+      "productId": "2",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2024-05-10",
+      "rating": 4,
+      "title": "Good belt, but stiff at first",
+      "comment": "Took a few sessions to break in, but once it did, it felt perfect. Definitely a great investment for serious lifters."
+    },
+    {
+      "id": "203",
+      "productId": "2",
+      "name": "Rebecca Adams",
+      "email": "rebecca.adams@example.com",
+      "date": "2025-02-27",
+      "rating": 5,
+      "title": "Great for deadlifts",
+      "comment": "Super supportive without feeling restrictive. I can brace better, and my lifts feel more controlled. Love it!"
+    }
+  ],
+  "knee_sleeves": [
+    {
+      "id": "301",
+      "productId": "3",
+      "name": "Michael Thompson",
+      "email": "michael.thompson@example.com",
+      "date": "2023-09-22",
+      "rating": 5,
+      "title": "Knees feel bulletproof",
+      "comment": "These knee sleeves give the perfect amount of compression. I feel more stable during squats and heavy leg days. Highly recommend!"
+    },
+    {
+      "id": "302",
+      "productId": "3",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2024-12-10",
+      "rating": 3,
+      "title": "Runs small",
+      "comment": "Decent sleeves, but the sizing was off. I ordered a medium, but they were way too tight. Size up if you're unsure."
+    },
+    {
+      "id": "303",
+      "productId": "3",
+      "name": "Sarah Lewis",
+      "email": "sarah.lewis@example.com",
+      "date": "2025-01-08",
+      "rating": 5,
+      "title": "Great for joint pain",
+      "comment": "I have mild knee pain, and these sleeves help a lot. They keep my knees warm and supported during lifts. Worth it!"
+    }
+  ],
+  "wrist_wraps": [
+    {
+      "id": "401",
+      "productId": "4",
+      "name": "Daniel Miller",
+      "email": "daniel.miller@example.com",
+      "date": "2023-11-05",
+      "rating": 5,
+      "title": "Great wrist support",
+      "comment": "These wraps saved my wrists on heavy bench days. They’re easy to tighten and stay in place throughout my workout."
+    },
+    {
+      "id": "402",
+      "productId": "4",
+      "name": "Anonymous",
+      "email": "anonymous@example.com",
+      "date": "2024-06-18",
+      "rating": 4,
+      "title": "A bit too stiff",
+      "comment": "Good quality, but they’re very rigid. Might take some time to get used to."
+    },
+    {
+      "id": "403",
+      "productId": "4",
+      "name": "Olivia Martinez",
+      "email": "olivia.martinez@example.com",
+      "date": "2025-03-01",
+      "rating": 5,
+      "title": "Perfect for heavy lifts",
+      "comment": "No more wrist pain! These wraps give me the confidence to go heavier on my overhead presses and bench."
+    }
+  ]
+}

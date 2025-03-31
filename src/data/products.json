@@ -1,0 +1,186 @@
+[
+  {
+    "id": "1",
+    "name": "Olympic Powerlifting Barbell",
+    "category": "Barbells",
+    "price": 299.99,
+    "stock": 15,
+    "description": "High-quality 20kg Olympic powerlifting barbell with 28mm diameter and 200k PSI tensile strength.",
+    "features": [
+      "Constructed from high-grade steel with 200k PSI tensile strength",
+      "28mm diameter shaft with dual knurl marks for Olympic and powerlifting",
+      "Sleeves rotate on high-quality needle bearings for smooth spin",
+      "Chrome finish for durability and corrosion resistance",
+      "IWF and IPF specification compliant"
+    ],
+    "image": "https://example.com/barbell.jpg"
+  },
+  {
+    "id": "2",
+    "name": "13MM Lever Belt",
+    "category": "Belts",
+    "price": 99.99,
+    "stock": {
+      "xs": 5,
+      "s": 8,
+      "m": 10,
+      "l": 7,
+      "xl": 4,
+      "2xl": 0,
+      "3xl": 6,
+      "4xl": 0,
+      "5xl": 3
+    },
+    "description": "13mm thick genuine leather weightlifting belt with a secure lever buckle for maximum support.",
+    "features": [
+      "Constructed from heavyweight 13mm genuine leather for maximum support",
+      "Patented lever buckle system for quick tightening and release",
+      "Suede lining to prevent slipping during heavy lifts",
+      "IPF approved and competition legal",
+      "Made in the USA with premium vegetable-tanned leather"
+    ],
+    "image": "https://example.com/lever-belt.jpg"
+  },
+  {
+    "id": "22",
+    "name": "10MM Lever Belt",
+    "category": "Belts",
+    "price": 99.99,
+    "stock": {
+      "xs": 5,
+      "s": 8,
+      "m": 10,
+      "l": 7,
+      "xl": 4,
+      "2xl": 0,
+      "3xl": 6,
+      "4xl": 0,
+      "5xl": 3
+    },
+    "description": "10mm thick genuine leather weightlifting belt with a secure lever buckle for maximum support.",
+    "features": [
+      "Constructed from 10mm thick genuine leather for balance of support and flexibility",
+      "Quick-release lever mechanism for easy adjustment between lifts",
+      "Double stitching throughout for enhanced durability",
+      "IPF approved for competition use",
+      "Available in multiple sizes with customizable hole spacing"
+    ],
+    "image": "https://example.com/lever-belt.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Knee Sleeves (Pair)",
+    "category": "Support Gear",
+    "price": 59.99,
+    "stock": {
+      "small": 5,
+      "medium": 8,
+      "large": 10
+    },
+    "description": "7mm thick neoprene knee sleeves for added compression and stability during heavy squats.",
+    "features": [
+      "Constructed from heavyweight 7mm neoprene for optimal compression",
+      "Manufactured with Meryl® and Lycra® fibers to stay soft and breathable",
+      "Anatomically shaped for perfect fit during lifts",
+      "IPF approved and IWF, USAPL and USPA compliant",
+      "Made in Sheffield, Great Britain"
+    ],
+    "image": "https://example.com/knee-sleeves.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Lifting Chalk Block",
+    "category": "Accessories",
+    "price": 9.99,
+    "stock": 100,
+    "description": "Premium magnesium carbonate lifting chalk for improved grip and reduced hand moisture.",
+    "features": [
+      "Pure magnesium carbonate for maximum moisture absorption",
+      "Easy-break design to minimize waste",
+      "Fine grain texture for optimal coverage",
+      "Residue-minimizing formula to reduce gym cleanup",
+      "56g (2oz) block provides long-lasting use"
+    ],
+    "image": "https://example.com/chalk.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Wrist Wraps (Pair)",
+    "category": "Support Gear",
+    "price": 24.99,
+    "stock": {
+      "small": 5,
+      "medium": 8,
+      "large": 10
+    },
+    "description": "Heavy-duty wrist wraps providing extra wrist support during pressing movements.",
+    "features": [
+      "Constructed from high-tensile elastic material for maximum support",
+      "Reinforced thumb loop for secure positioning",
+      "Heavy-duty Velcro closure system ensures proper tightness",
+      "Available in multiple lengths for different support needs",
+      "IPF approved for competition use"
+    ],
+    "image": "https://example.com/wrist-wraps.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Deadlift Slippers",
+    "category": "Footwear",
+    "price": 34.99,
+    "stock": 20,
+    "description": "Ultra-thin sole deadlift slippers for improved ground contact and stability.",
+    "features": [
+      "2mm ultra-thin rubber sole for maximum ground feel",
+      "Lightweight mesh upper for breathability",
+      "Wide toe box allows for natural toe splay during lifts",
+      "Non-slip surface pattern for improved traction",
+      "Minimal heel-to-toe drop for optimal deadlift position"
+    ],
+    "image": "https://example.com/slippers.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Powerlifting Singlet",
+    "category": "Apparel",
+    "price": 69.99,
+    "stock": {
+      "xs": 5,
+      "s": 8,
+      "m": 10,
+      "l": 7,
+      "xl": 4,
+      "2xl": 0,
+      "3xl": 6,
+      "4xl": 0,
+      "5xl": 3
+    },
+    "description": "IPF-approved powerlifting singlet with a comfortable and competition-ready fit.",
+    "features": [
+      "Constructed from heavyweight 350gm double jersey fabric",
+      "Manufactured with Meryl® and Lycra® fibers for durability and compression",
+      "Four-way stretch material allows full range of motion",
+      "IPF approved and IWF, USAPL and USPA compliant",
+      "Made in Sheffield, Great Britain"
+    ],
+    "image": "https://example.com/singlet.jpg",
+
+    "fit": ["Men's", "Women's"]
+  },
+  {
+    "id": "8",
+    "name": "Resistance Bands Set",
+    "category": "Accessories",
+    "price": 39.99,
+    "stock": 35,
+    "description": "Set of heavy-duty resistance bands for warm-ups, mobility work, and accommodating resistance.",
+    "features": [
+      "Set includes 5 bands of varying resistance levels (10-175lbs)",
+      "Made from layered natural latex for maximum durability",
+      "Color-coded for easy identification of resistance level",
+      "Seamless tube design prevents weak points and tearing",
+      "Includes carrying bag and exercise guide"
+    ],
+    "image": "https://example.com/resistance-bands.jpg"
+  }
+]
