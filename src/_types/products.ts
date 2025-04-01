@@ -11,6 +11,6 @@ export interface ProductT {
   collection?: string | undefined;
 }
 interface sizeStock {
-  [size: string]: number;
+  [size: string]: number | undefined;
 }
 export type Products = ProductT[];

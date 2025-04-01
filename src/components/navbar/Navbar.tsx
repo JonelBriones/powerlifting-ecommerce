@@ -25,7 +25,7 @@ const Navbar = () => {
   const [productsHover, setProductsHover] = useState(false);
   const [collectionsHover, setCollectionssHover] = useState(false);
   return (
-    <div className="h-40 border flex justify-between place-items-center p-8 bg-black sticky top-0">
+    <div className="h-40 border flex justify-between place-items-center p-8 bg-black sticky top-0 z-100">
       <div className="flex gap-8">
         <span className="border border-white w-30 text-white">
           <Link href={"/"}>LOGO</Link>
@@ -61,17 +61,17 @@ const Navbar = () => {
             onMouseLeave={() => setCollectionssHover(false)}
           >
             <span className="flex gap-2 place-items-center">
-              <Link href={"/collections"}>Collections</Link>
+              <Link href={"/collections"}>COLLECTIONS</Link>
               <IoIosArrowDown size={"1rem"} />
             </span>
 
             {collectionsHover && (
               <div className="flex flex-col gap-4 absolute top-10 bg-white text-black p-4">
-                {collections.map((category) => (
+                {collections.map((category, idx) => (
                   <Link
                     className="border-b-2 border-transparent hover:border-b-primary-red transition-colors ease-in-out "
                     href={`/collections/${category}`}
-                    key={category}
+                    key={idx}
                   >
                     {category}
                   </Link>
