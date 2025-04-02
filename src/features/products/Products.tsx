@@ -15,46 +15,62 @@ const Products = () => {
   const [sortByCollection, setSortbyCollection] = useState<string[]>([]);
   const [openProductSort, setOpenProductSort] = useState(false);
   const [openCollectionSort, setOpenCollectionSort] = useState(false);
+  const [toggleQuickview, setToggleQuickview] = useState<ProductT | null>(null);
+  const [showBackTopBtn, setShowBackTopBtn] = useState(false);
 
-  // on filter collections on product filter, vice versa
-  let collections = [
-    ...new Set(
-      Object.values(
-        data
-          .filter((product) => product.collection)
-          .map((product) => product.collection)
-      )
-    ),
-  ];
+  const filterByProducts = data.filter((product) => {
+    const collectionMatch =
+      sortByCollection.length === 0 ||
+      (product.collection && sortByCollection.includes(product.collection));
 
-  let filteredProducts = [
-    ...new Set(
-      Object.values(
-        data
-          .filter(
-            (product) =>
-              sortByCollection.length &&
-              collections.includes(product.collection)
-          )
-          .map((item) => item.category)
-      )
-    ),
-  ];
+    const categoryMatch =
+      sortByProduct.length === 0 || sortByProduct.includes(product.category);
 
-  let categories = sortByCollection?.length
-    ? filteredProducts
-    : [...new Set(Object.values(data.map((product) => product.category)))];
+    return collectionMatch && categoryMatch;
+  });
 
-  let collectionView = sortByCollection.length
-    ? data.filter((product) => product.collection)
-    : data;
+  const filteredCategories =
+    sortByCollection.length > 0
+      ? [
+          ...new Set(
+            Object.values(
+              data
+                .filter(
+                  (product) =>
+                    product.collection &&
+                    sortByCollection.includes(product.collection)
+                )
+                .map((product) => product.category)
+            )
+          ),
+        ]
+      : [...new Set(Object.values(data.map((product) => product.category)))];
 
-  let productView = sortByProduct.length
-    ? collectionView.filter((product) =>
-        sortByProduct.includes(product.category)
-      )
-    : collectionView;
-  console.log("product view", productView);
+  const filteredCollections =
+    sortByProduct.length > 0
+      ? [
+          ...new Set(
+            Object.values(
+              data
+                .filter(
+                  (product) =>
+                    product.collection &&
+                    sortByProduct.includes(product.category)
+                )
+                .map((product) => product.collection)
+            )
+          ),
+        ]
+      : [
+          ...new Set(
+            Object.values(
+              data
+                .filter((product) => product.collection)
+                .map((product) => product.collection)
+            )
+          ),
+        ];
+
   const ohHandleSortBy = (
     sortBy: string[],
     fn: React.Dispatch<React.SetStateAction<string[]>>,
@@ -68,9 +84,6 @@ const Products = () => {
       fn([...sortByProduct, category]);
     }
   };
-  const [toggleQuickview, setToggleQuickview] = useState<ProductT | null>(null);
-
-  const [showBackTopBtn, setShowBackTopBtn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +126,7 @@ const Products = () => {
             )}
           </div>
           {openCollectionSort &&
-            collections.map(
+            filteredCollections.map(
               (collection, idx) =>
                 collection && (
                   <div
@@ -166,7 +179,7 @@ const Products = () => {
             )}
           </div>
           {openProductSort &&
-            categories.map((category, idx) => (
+            filteredCategories.map((category, idx) => (
               <div
                 key={idx}
                 className="flex gap-2 cursor-pointer w-full"
@@ -201,9 +214,9 @@ const Products = () => {
           <div className="md:hidden border p-3 flex gap-4 place-items-center w-1/2 cursor-pointer">
             <VscSettings size={"1.25rem"} /> Filter
           </div>
-          <span>{productView.length} products</span>
+          <span>{filterByProducts.length} products</span>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 overflow-auto">
-            {productView.map((product) => (
+            {filterByProducts.map((product) => (
               <Fragment key={product.id}>
                 <Product
                   product={product}
@@ -224,11 +237,11 @@ const Products = () => {
                 : "opacity-0 translate-y-100"
             } transition ease-linear transform duration-200`}
           >
-            <div className="flex place-items-center justify-center bg-white w-[1280px] relative overflow-auto lg:h-[900px]">
-              <ProductView product={toggleQuickview} />
+            <div className="flex place-items-center justify-center bg-white w-full max-w-[1280px] relative overflow-auto lg:h-[900px]">
+              <ProductView product={toggleQuickview} reviews={[]} />
               <button
                 onClick={() => setToggleQuickview(null)}
-                className="absolute top-2 right-2"
+                className="absolute top-2 right-4"
               >
                 <FaXmark
                   size={"1.5rem"}

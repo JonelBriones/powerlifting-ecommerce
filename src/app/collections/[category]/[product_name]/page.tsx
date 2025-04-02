@@ -17,6 +17,7 @@ const page = async ({ params }: { params: { product_name: string } }) => {
   const reviews =
     reviewsData[category.toLowerCase() as keyof typeof reviewsData] || [];
 
+  // console.log(revied)
   return <ProductView product={product} reviews={reviews} />;
 };
 

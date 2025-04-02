@@ -8,22 +8,13 @@ import data from "@/data/products.json";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
-  const links = [
-    "products",
-    "collections",
-    "gift cards",
-    "retailers",
-    "contact",
-  ];
   const item = 2;
   let categories = [
     ...new Set(Object.values(data.map((product) => product.category))),
   ];
-  let collections = [
-    ...new Set(Object.values(data.map((product) => product.collection))),
-  ];
+
   const [productsHover, setProductsHover] = useState(false);
-  const [collectionsHover, setCollectionssHover] = useState(false);
+
   return (
     <div className="h-40 border flex justify-between place-items-center p-8 bg-black sticky top-0 z-100">
       <div className="flex gap-8">
@@ -48,30 +39,6 @@ const Navbar = () => {
                     className="border-b-2 border-transparent hover:border-b-primary-red transition-colors ease-in-out "
                     href={`/collections/${category}`}
                     key={category}
-                  >
-                    {category}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </li>
-          <li
-            className="flex gap-2 py-2 place-items-center relative flex-col group"
-            onMouseEnter={() => setCollectionssHover(true)}
-            onMouseLeave={() => setCollectionssHover(false)}
-          >
-            <span className="flex gap-2 place-items-center">
-              <Link href={"/collections"}>COLLECTIONS</Link>
-              <IoIosArrowDown size={"1rem"} />
-            </span>
-
-            {collectionsHover && (
-              <div className="flex flex-col gap-4 absolute top-10 bg-white text-black p-4">
-                {collections.map((category, idx) => (
-                  <Link
-                    className="border-b-2 border-transparent hover:border-b-primary-red transition-colors ease-in-out "
-                    href={`/collections/${category}`}
-                    key={idx}
                   >
                     {category}
                   </Link>
