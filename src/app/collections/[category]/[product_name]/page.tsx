@@ -15,10 +15,17 @@ const page = async ({ params }: { params: { product_name: string } }) => {
   if (!product) return <div>could not find product</div>;
 
   const reviews =
-    reviewsData[category.toLowerCase() as keyof typeof reviewsData] || [];
-
-  // console.log(revied)
-  return <ProductView product={product} reviews={reviews} />;
+    reviewsData[
+      category.split("%20").join("_").toLowerCase() as keyof typeof reviewsData
+    ] || [];
+  console.log("category", category.split("%20").join("_").toLowerCase());
+  console.log("reviews", reviewsData);
+  console.log("product", product);
+  const productReview = reviews.filter(
+    (review) => review.productId === product.id
+  );
+  console.log("product reviews", productReview);
+  return <ProductView product={product} reviews={productReview} />;
 };
 
 export default page;

@@ -87,7 +87,7 @@
   {
     "id": "3",
     "name": "Knee Sleeves (Pair)",
-    "category": "Support Gear",
+    "category": "Knee Sleeves",
     "price": 59.99,
     "stock": {
       "small": 5,
@@ -134,7 +134,7 @@
   {
     "id": "5",
     "name": "Wrist Wraps (Pair)",
-    "category": "Support Gear",
+    "category": "Wrist Wraps",
     "price": 24.99,
     "stock": {
       "small": 5,
@@ -181,7 +181,7 @@
   {
     "id": "7",
     "name": "Powerlifting Singlet",
-    "category": "Apparel",
+    "category": "Singlets",
     "price": 69.99,
     "stock": {
       "xs": 5,

@@ -228,7 +228,7 @@ const Products = () => {
         </div>
       </div>
 
-      {toggleQuickview ? (
+      {toggleQuickview && (
         <Fragment>
           <div
             className={`top-0 left-0 right-0 delay-100 z-10 flex justify-center bottom-0 ${
@@ -251,8 +251,6 @@ const Products = () => {
             </div>
           </div>
         </Fragment>
-      ) : (
-        <></>
       )}
       <Footer />
     </div>

@@ -184,7 +184,7 @@
     },
     {
       "id": "203",
-      "productId": "2",
+      "productId": "22",
       "name": "Rebecca Adams",
       "email": "rebecca.adams@example.com",
       "date": "2025-02-27",
@@ -228,7 +228,7 @@
   "wrist_wraps": [
     {
       "id": "401",
-      "productId": "4",
+      "productId": "5",
       "name": "Daniel Miller",
       "email": "daniel.miller@example.com",
       "date": "2023-11-05",
@@ -238,7 +238,7 @@
     },
     {
       "id": "402",
-      "productId": "4",
+      "productId": "5",
       "name": "Anonymous",
       "email": "anonymous@example.com",
       "date": "2024-06-18",
@@ -248,13 +248,99 @@
     },
     {
       "id": "403",
-      "productId": "4",
+      "productId": "5",
       "name": "Olivia Martinez",
       "email": "olivia.martinez@example.com",
       "date": "2025-03-01",
       "rating": 5,
       "title": "Perfect for heavy lifts",
       "comment": "No more wrist pain! These wraps give me the confidence to go heavier on my overhead presses and bench."
+    },
+    {
+      "id": "404",
+      "productId": "5",
+      "name": "Alex Johnson",
+      "email": "alex@example.com",
+      "date": "2025-03-27",
+      "rating": 5,
+      "title": "Best Wrist Wraps!",
+      "comment": "Super supportive and comfortable! Helped me increase my bench press safely."
+    },
+    {
+      "id": "405",
+      "productId": "5",
+      "name": "Chris Evans",
+      "email": "chris@example.com",
+      "date": "2025-03-26",
+      "rating": 3,
+      "title": "Great, but a bit stiff",
+      "comment": "Really solid wrist support, but takes a few workouts to break in."
+    }
+  ],
+  "accessories": [
+    {
+      "id": "501",
+      "productId": "4",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "date": "2025-03-30",
+      "rating": 5,
+      "title": "Great Chalk for Grip!",
+      "comment": "This chalk block is amazing! Keeps my hands dry and gives a solid grip during heavy lifts."
+    },
+    {
+      "id": "502",
+      "productId": "4",
+      "name": "Emily Smith",
+      "email": "emily@example.com",
+      "date": "2025-03-28",
+      "rating": 4,
+      "title": "Good Quality",
+      "comment": "The chalk is high quality and lasts a while, but it's a bit crumbly."
+    },
+    {
+      "id": "503",
+      "productId": "8",
+      "name": "Daniel Wilson",
+      "email": "daniel@example.com",
+      "date": "2025-01-22",
+      "rating": 4,
+      "title": "Versatile and Strong Bands",
+      "comment": "I love these resistance bands! Great for warming up and accessory work."
+    }
+  ],
+  "footwear": [
+    {
+      "id": "601",
+      "productId": "6",
+      "name": "Sarah Miller",
+      "email": "sarah@example.com",
+      "date": "2024-05-15",
+      "rating": 5,
+      "title": "Perfect for Deadlifting!",
+      "comment": "These slippers are amazing! No slipping and give me a stable base for heavy lifts."
+    }
+  ],
+  "singlets": [
+    {
+      "id": "701",
+      "productId": "7",
+      "name": "Michael Brown",
+      "email": "michael@example.com",
+      "date": "2024-12-05",
+      "rating": 5,
+      "title": "Great Fit and Comfort",
+      "comment": "The singlet fits perfectly and feels great during competition!"
+    },
+    {
+      "id": "702",
+      "productId": "7",
+      "name": "Lisa Green",
+      "email": "lisa@example.com",
+      "date": "2024-12-05",
+      "rating": 4,
+      "title": "Good but a bit tight",
+      "comment": "Quality is great, but the sizing runs a little small. Consider going up a size."
     }
   ]
 }

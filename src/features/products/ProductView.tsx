@@ -1,12 +1,10 @@
 "use client";
-import { Products, ProductT } from "@/_types/products";
+import { ProductT } from "@/_types/products";
 import { Review } from "@/_types/reviews";
 import Image from "next/image";
-import React, { Fragment, useState } from "react";
-import { RiStarSFill } from "react-icons/ri";
+import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import ProductReview from "./ProductReview";
-import { usePathname } from "next/navigation";
 
 const ProductView = ({
   product,
@@ -17,19 +15,14 @@ const ProductView = ({
   reviews: Review[];
   children?: React.ReactNode;
 }) => {
-  const pathname = usePathname();
-  const { category, description, image, name, price, features, stock, fit } =
+  const { category, description, images, name, price, features, stock, fit } =
     product;
   const [toggleSizeGuide, setToggleSizeGuide] = useState(false);
   const [toggleMeasureGuide, setToggleMeasureGuide] = useState(false);
   const [toggleCareInstructions, setToggleCareInstructions] = useState(false);
 
-  const handleToggleGuide = (guide: string) => {};
   const [selectSize, setSelectSize] = useState<string | null>(null);
   const [selectFit, setSelectFit] = useState<string | null>(null);
-  // const totalReview =
-  //   reviews &&
-  //   (reviews.reduce((a, b) => b.rating + a, 0) / reviews.length).toFixed(2);
 
   const ToggleSection = ({
     label,
@@ -57,13 +50,10 @@ const ProductView = ({
       )}
     </div>
   );
-  console.log(reviews);
 
-  const isSingleView = pathname.split("/").length === 4;
-  console.log(product);
   const [mainImg, setMainImg] = useState(0);
   return (
-    <div className="w-full max-w-[1536px] flex flex-col place-items-center md:place-items-stretch lg:m-auto md:flex-row gap-8 xl:border p-4 h-full pr-0 relative">
+    <div className="w-full max-w-[1536px] flex flex-col place-items-center md:place-items-stretch lg:m-auto md:flex-row gap-8 p-4 h-full pr-0 relative">
       <div className="md:flex gap-4 block md:sticky flex-1 h-full top-44">
         <div className="hidden md:flex flex-col gap-4 w-24">
           {product.images.map((image, idx) => (
@@ -91,7 +81,7 @@ const ProductView = ({
       </div>
 
       <div className="flex-1">
-        <div className="flex flex-col gap-4 max-w-160 border-blue-200 text-left text-black h-full overflow-auto pr-4 md:pr-8 pb-8">
+        <div className="flex flex-col gap-4 max-w-160 text-left text-black h-full overflow-auto pr-4 md:pr-8 pb-8">
           <div className="md:block flex justify-center flex-col place-items-center md:place-items-stretch text-center md:text-left">
             <h2 className="font-medium tracking-widest inline text-wrap text-5xl">
               {name}

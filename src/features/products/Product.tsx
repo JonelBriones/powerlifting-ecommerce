@@ -24,7 +24,7 @@ const Product = ({ product, setToggleQuickview }: Params) => {
             width={0}
             height={0}
             sizes="100vh"
-            alt={product.image}
+            alt={product.images[0]}
             className="w-full"
           />
         </Link>
