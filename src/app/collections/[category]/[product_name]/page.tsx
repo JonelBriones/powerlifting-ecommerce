@@ -1,8 +1,9 @@
 "use server";
 import ProductView from "@/features/products/ProductView";
-import React from "react";
+import React, { Fragment } from "react";
 import data from "@/data/products.json";
 import reviewsData from "@/data/reviews.json";
+import Footer from "@/features/footer/Footer";
 
 const page = async ({ params }: { params: { product_name: string } }) => {
   const { category, product_name } =
@@ -25,7 +26,12 @@ const page = async ({ params }: { params: { product_name: string } }) => {
     (review) => review.productId === product.id
   );
   console.log("product reviews", productReview);
-  return <ProductView product={product} reviews={productReview} />;
+  return (
+    <Fragment>
+      <ProductView product={product} reviews={productReview} />
+      <Footer />
+    </Fragment>
+  );
 };
 
 export default page;

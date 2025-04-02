@@ -6,8 +6,10 @@ import { IoIosSearch } from "react-icons/io";
 import { BiShoppingBag } from "react-icons/bi";
 import data from "@/data/products.json";
 import { IoIosArrowDown } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
   const item = 2;
   let categories = [
     ...new Set(Object.values(data.map((product) => product.category))),
@@ -35,13 +37,16 @@ const Navbar = () => {
             {productsHover && (
               <div className="flex flex-col gap-4 absolute top-10 bg-white text-black p-4">
                 {categories.map((category) => (
-                  <Link
+                  <button
+                    onClick={() => {
+                      router.push(`/collections/?categories=${category}`);
+                    }}
                     className="border-b-2 border-transparent hover:border-b-primary-red transition-colors ease-in-out "
-                    href={`/collections/${category}`}
+                    // href={`/collections/${category}`}
                     key={category}
                   >
                     {category}
-                  </Link>
+                  </button>
                 ))}
               </div>
             )}

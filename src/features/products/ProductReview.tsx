@@ -4,12 +4,24 @@ import { RiStarSFill } from "react-icons/ri";
 import { RiStarSLine } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Pagination from "@/components/Pagination";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const ProductReview = ({ reviews }: { reviews: Review[] }) => {
-  const [page, setPage] = useState(1);
-  const totalPerPage = 3;
-  const [firstReview, setfirstReview] = useState(0);
-  const [lastReview, setLastReview] = useState(totalPerPage);
+const ProductReview = ({ reviewsData }: { reviewsData: Review[] }) => {
+  const [reviewsByRecent, setReviewsByRecent] = useState(false);
+
+  const reviews = reviewsByRecent
+    ? [...reviewsData].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      )
+    : reviewsData;
+
+  const [currentPage, setCurrentReview] = useState(1);
+  const [reviewsPerPage, setReviewsPerPage] = useState(5);
+  const indexOfLastReview = currentPage * reviewsPerPage;
+  const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
+  const currentReviews = reviews.slice(indexOfFirstReview, indexOfLastReview);
+
   const totalReview = (
     reviews.reduce((a, b) => b.rating + a, 0) / reviews.length
   ).toFixed(2);
@@ -51,10 +63,13 @@ const ProductReview = ({ reviews }: { reviews: Review[] }) => {
     ))
     .reverse();
 
-  function showPage(k) {}
+  useEffect(() => {
+    const scrollToRatings = document.getElementById("reviews");
+    scrollToRatings?.scrollIntoView({ behavior: "smooth" });
+  }, [currentPage]);
 
   return (
-    <div className="flex place-items-center flex-col gap-4">
+    <div className="flex flex-col gap-4" id="reviews">
       <div className="flex flex-col gap-4 my-6 w-full place-items-center">
         <h4 className="text-3xl tracking-widest">CUSTOMER REVIEWS</h4>
         <div className="flex place-items-center flex-col tracking-wider">
@@ -79,8 +94,19 @@ const ProductReview = ({ reviews }: { reviews: Review[] }) => {
           Write a review
         </button>
       </div>
+      <div
+        className="flex cursor-pointer gap-2"
+        onClick={() => setReviewsByRecent(!reviewsByRecent)}
+      >
+        <button type="button">Most Recent</button>
+        {reviewsByRecent ? (
+          <IoIosArrowUp size={"1.25rem"} />
+        ) : (
+          <IoIosArrowDown size={"1.25rem"} />
+        )}
+      </div>
       <div className="flex flex-col gap-8">
-        {reviews.slice(firstReview, lastReview).map((review, idx) => (
+        {currentReviews.map((review, idx) => (
           <div key={review.id}>
             <div className="flex flex-col gap-2 border-t border-neutral-200 pt-4">
               <div className="flex justify-between">
@@ -112,48 +138,14 @@ const ProductReview = ({ reviews }: { reviews: Review[] }) => {
             </div>
           </div>
         ))}
-        <div className="flex">
-          <span>{page}</span>
-          <button
-            className={`${page === 1 ? "opacity-50" : ""}`}
-            onClick={() => {
-              setfirstReview((prev) => prev - totalPerPage);
-              setLastReview((prev) => prev - totalPerPage);
-              setPage((prev) => prev - 1);
-            }}
-            disabled={page === 1}
-          >
-            <FaAngleLeft size={"1.5rem"} />
-          </button>
-          {/* <span>{page}</span> */}
-          <div className="flex place-items-center gap-2">
-            {Array(2)
-              .fill(0)
-              .map((_, idx) => (
-                <span
-                  key={idx + 1}
-                  className={`${
-                    page === idx + 1
-                      ? "text-xl font-medium underline"
-                      : "text-lg"
-                  }`}
-                >
-                  {idx + 1}
-                </span>
-              ))}
-          </div>
-          <button
-            className={`${page * 3 >= reviews.length ? "opacity-50" : ""}`}
-            onClick={() => {
-              setfirstReview((prev) => prev + totalPerPage);
-              setLastReview((prev) => prev + totalPerPage);
-              setPage((prev) => prev + 1);
-            }}
-            disabled={page * 3 >= reviews.length}
-          >
-            <FaAngleRight size={"1.5rem"} />
-          </button>
-        </div>
+
+        <Pagination
+          reviewsPerPage={reviewsPerPage}
+          reviewsLength={reviews.length}
+          currentPage={currentPage}
+          setCurrentReview={setCurrentReview}
+          currentReviews={currentReviews}
+        />
       </div>
     </div>
   );

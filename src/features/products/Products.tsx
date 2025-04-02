@@ -1,16 +1,20 @@
 "use client";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import data from "@/data/products.json";
 import Product from "./Product";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { VscSettings } from "react-icons/vsc";
 import Footer from "../footer/Footer";
 import { FaXmark } from "react-icons/fa6";
-import ProductQuickview from "./ProductReview";
 import ProductView from "./ProductView";
 import { ProductT } from "@/_types/products";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Products = () => {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
+
   const [sortByProduct, setSortbyProduct] = useState<string[]>([]);
   const [sortByCollection, setSortbyCollection] = useState<string[]>([]);
   const [openProductSort, setOpenProductSort] = useState(false);
@@ -92,10 +96,27 @@ const Products = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  useEffect(() => {
+    let categoriesQuery = searchParams.get("categories");
+    if (categoriesQuery) {
+      // setSortbyProduct([categoriesQuery]);
+      console.log(pathname);
+      setSortbyProduct([categoriesQuery]);
+    }
+
+    let collectionsQuery = searchParams.get("collections");
+    if (collectionsQuery) {
+      setSortbyCollection([collectionsQuery]);
+    }
+    if (categoriesQuery === null && collectionsQuery === null) {
+      setSortbyProduct([]);
+      setSortbyCollection([]);
+    }
+  }, [searchParams]);
 
   return (
     <div
-      className={`relative h-[calc(100vh-160px)]  ${
+      className={`relative h-[calc(100vh-160px)] ${
         toggleQuickview ? "overflow-hidden" : ""
       }`}
     >
@@ -132,13 +153,13 @@ const Products = () => {
                   <div
                     key={idx}
                     className="flex gap-2 cursor-pointer w-full"
-                    onClick={() =>
+                    onClick={() => {
                       ohHandleSortBy(
                         sortByCollection,
                         setSortbyCollection,
                         collection
-                      )
-                    }
+                      );
+                    }}
                   >
                     <input
                       type="checkbox"
@@ -183,9 +204,9 @@ const Products = () => {
               <div
                 key={idx}
                 className="flex gap-2 cursor-pointer w-full"
-                onClick={() =>
-                  ohHandleSortBy(sortByProduct, setSortbyProduct, category)
-                }
+                onClick={() => {
+                  ohHandleSortBy(sortByProduct, setSortbyProduct, category);
+                }}
               >
                 <input
                   type="checkbox"
@@ -252,7 +273,6 @@ const Products = () => {
           </div>
         </Fragment>
       )}
-      <Footer />
     </div>
   );
 };

@@ -9,11 +9,9 @@ import ProductReview from "./ProductReview";
 const ProductView = ({
   product,
   reviews,
-  children,
 }: {
   product: ProductT;
   reviews: Review[];
-  children?: React.ReactNode;
 }) => {
   const { category, description, images, name, price, features, stock, fit } =
     product;
@@ -38,7 +36,6 @@ const ProductView = ({
         label !== "CARE INSTRUCTIONS" ? "border-b-0" : ""
       } p-4 text-center`}
       onClick={() => {
-        console.log(label, isOpen);
         setIsOpen(!isOpen);
       }}
     >
@@ -177,8 +174,7 @@ const ProductView = ({
               setIsOpen={setToggleCareInstructions}
             />
           </div>
-          {reviews?.length > 0 && <ProductReview reviews={reviews} />}
-          {/* {children} */}
+          {reviews?.length > 0 && <ProductReview reviewsData={reviews} />}
         </div>
       </div>
     </div>
