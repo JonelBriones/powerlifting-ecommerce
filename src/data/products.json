@@ -90,9 +90,9 @@
     "category": "Knee Sleeves",
     "price": 59.99,
     "stock": {
-      "small": 5,
-      "medium": 8,
-      "large": 10
+      "s": 5,
+      "m": 8,
+      "l": 10
     },
     "description": "7mm thick neoprene knee sleeves for added compression and stability during heavy squats.",
     "features": [
@@ -137,9 +137,9 @@
     "category": "Wrist Wraps",
     "price": 24.99,
     "stock": {
-      "small": 5,
-      "medium": 8,
-      "large": 10
+      "s": 5,
+      "m": 8,
+      "l": 10
     },
     "description": "Heavy-duty wrist wraps providing extra wrist support during pressing movements.",
     "features": [

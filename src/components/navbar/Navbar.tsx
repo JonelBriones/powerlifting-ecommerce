@@ -7,7 +7,8 @@ import { BiShoppingBag } from "react-icons/bi";
 import data from "@/data/products.json";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter } from "next/navigation";
-
+import products from "@/data/products.json";
+import { Products, ProductT } from "@/_types/products";
 const Navbar = () => {
   const router = useRouter();
   const item = 2;
@@ -16,6 +17,25 @@ const Navbar = () => {
   ];
 
   const [productsHover, setProductsHover] = useState(false);
+  interface Cart {
+    id: string;
+    quantity: number;
+  }
+  const defaultCart = [
+    {
+      id: "1",
+      quantity: 1,
+    },
+    {
+      id: "2",
+      quantity: 1,
+    },
+    {
+      id: "3",
+      quantity: 1,
+    },
+  ];
+  const [cart, setCart] = useState<Cart[]>(defaultCart);
 
   return (
     <div className="h-40 border flex justify-between place-items-center p-8 bg-black sticky top-0 z-100">
@@ -68,7 +88,9 @@ const Navbar = () => {
           className="cursor-pointer"
         />
         <div className="relative">
-          <span className="absolute -bottom-[.5px] -right-[1.5px] w-4 h-4 rounded-full bg-primary-red border-white border-2"></span>
+          {cart.length > 0 && (
+            <span className="absolute -bottom-[.5px] -right-[1.5px] w-4 h-4 rounded-full bg-primary-red border-white border-2"></span>
+          )}
           <BiShoppingBag
             size={"1.75rem"}
             color="white"

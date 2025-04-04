@@ -6,7 +6,7 @@ export interface ProductT {
   description: string;
   stock: number | sizeStock;
   images: string[];
-  fit?: string[];
+  fit?: string[] | undefined;
   features: string[];
   collection?: string | undefined;
 }
